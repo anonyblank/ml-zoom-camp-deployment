@@ -11,6 +11,6 @@ COPY ["Pipfile", "Pipfile.lock", "app.py", "./"] /app/
 RUN pipenv install --deploy --system 
 #--ignore-pipfile
 
-EXPOSE 9696
+# EXPOSE 9696
 
 ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:9696", "app:app"]
