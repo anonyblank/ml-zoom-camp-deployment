@@ -13,4 +13,4 @@ RUN pipenv install --deploy --system
 
 # EXPOSE 9696
 
-ENTRYPOINT ["gunicorn", "app:app"]
+ENTRYPOINT ["pipenv", "run", "gunicorn", "app:app"]
